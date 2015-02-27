@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Errors>
+	<!--General Errors-->
+	<Error Key="Exception Caught">
+		<Code>EC000</Code>
+		<Message>Error Message in Catch block.</Message>
+	</Error>
+	<Error Key="AuthenticationFailure">
+		<Code>EC001</Code>
+		<Message>Missing Authorization token or Unauthorized user.</Message>
+	</Error>
+	<Error Key="InvalidElement">
+		<Code>EC002</Code>
+		<Message>Child elements are not in correct order.</Message>
+	</Error>
+	<Error Key="InvalidElementName">
+		<Code>EC003</Code>
+		<Message>Name of the element is incorrect.</Message>
+	</Error>
+	<Error Key="MedicalPlanIdError">
+		<Code>EC004</Code>
+		<Message>MedicalPlanID is Invalid.(Should be an integer)</Message>
+	</Error>
+	<Error Key="DentalPlanIdError">
+		<Code>EC005</Code>
+		<Message>DentalPlanID is Invalid.(Should be an integer)</Message>
+	</Error>
+	<Error Key="VisionPlanIdError">
+		<Code>EC006</Code>
+		<Message>VisionPlanID is Invalid.(Should be an integer)</Message>
+	</Error>
+	<Error Key="Zipcode">
+		<Code>EC007</Code>
+		<Message>Zipcode is required</Message>
+	</Error>
+	<Error Key="ZipcodeError">
+		<Code>EC008</Code>
+		<Message>Zipcode is Invalid.(Should be five digit integer)</Message>
+	</Error>
+	<Error Key="ZipcodeMissing">
+		<Code>EC009</Code>
+		<Message>Zipcode element is missing.</Message>
+	</Error>
+	<Error Key="EmployeeAge">
+		<Code>EC010</Code>
+		<Message>Employee Age is required</Message>
+	</Error>
+	<Error Key="EmployeeAgeError">
+		<Code>EC011</Code>
+		<Message>Age of Employee is Invalid.(should be between 1-110)</Message>
+	</Error>
+	<Error Key="EmployeeAgeMissing">
+		<Code>EC012</Code>
+		<Message>Age of Employee Element is required.</Message>
+	</Error>
+	<Error Key="EmployeeGender">
+		<Code>EC013</Code>
+		<Message>Gender of Employee is required.</Message>
+	</Error>
+	<Error Key="EmployeeGenderError">
+		<Code>EC014</Code>
+		<Message>Gender of Employee is Invalid.(Should be M or F )</Message>
+	</Error>
+	<Error Key="EmployeeGenderMissing">
+		<Code>EC015</Code>
+		<Message>Gender of Employee is required.</Message>
+	</Error>
+	<Error Key="EmployeeIsMedicalPlanSelectedError">
+		<Code>EC016</Code>
+		<Message>IsMedicalPlanSelected for Employee is Invalid.(should be 0 or 1)</Message>
+	</Error>
+	<Error Key="EmployeeIsDentalPlanSelectedError">
+		<Code>EC017</Code>
+		<Message>IsDentalPlanSelected for Employee is Invalid.(should be 0 or 1)</Message>
+	</Error>
+	<Error Key="EmployeeIsVisionPlanSelectedError">
+		<Code>EC018</Code>
+		<Message>IsVisionPlanSelected for Employee is Invalid.(should be 0 or 1)</Message>
+	</Error>
+	<Error Key="EmployeeOrthoTreatmentError">
+		<Code>EC019</Code>
+		<Message>Ortho Treatment for Employee is Invalid.(Should be 0 or 1)</Message>
+	</Error>
+	<Error Key="EmpOrtho">
+		<Code>EC020</Code>
+		<Message>Othodontic for Employee is invalid since the DentalPlanExist for Employee is Either 0 or Invalid</Message>
+	</Error>
+	<Error Key="EmployeeCorrectivelensesError">
+		<Code>EC021</Code>
+		<Message>Correctivelenses for Employee is Invalid.(Should be 0 or 1)</Message>
+	</Error>
+	<Error Key="EmpLenses">
+		<Code>EC022</Code>
+		<Message>CorrectiveLenses for Employee is invalid since the VisionPlanExist for Employee is Either 0 or Invalid</Message>
+	</Error>
+	<Error Key="EmpMedUtil">
+		<Code>EC023</Code>
+		<Message>Medical Util for Employee is Invalid.(Should be between 1-3)</Message>
+	</Error>
+	<Error Key="EmpMedUtilInvalid">
+		<Code>EC024</Code>
+		<Message>Medical Utilities for Employee is invalid since the MedicalPlanExist for Employee is Either 0 or Invalid</Message>
+	</Error>
+	<Error Key="EmpMedUtilError">
+		<Code>EC025</Code>
+		<Message>Medical Utilities for Employee is invalid since the MedicalPlanExist for Employee is 1(Should be between 1-3)</Message>
+	</Error>
+	<Error Key="EmpPrescDrugsInvalid">
+		<Code>EC026</Code>
+		<Message>Drug Utilities for Employee is invalid since the MedicalPlanExist for Employee is Either 0 or Invalid</Message>
+	</Error>
+	<Error Key="EmpPrescDrugsError">
+		<Code>EC027</Code>
+		<Message>Drug Utilities for Employee is invalid since the MedicalPlanExist for Employee is 1(Should be between 1-3)</Message>
+	</Error>
+	<Error Key="EmpPrescDrugs">
+		<Code>EC028</Code>
+		<Message>Prescription Drugs for Employee is Invalid.(Should be between 1-3) </Message>
+	</Error>
+	<Error Key="HouseHoldIncomeError">
+		<Code>EC029</Code>
+		<Message>House hold Income is Invalid.( Should be between 1-9,999,999)</Message>
+	</Error>
+	<Error Key="SpouseAge">
+		<Code>EC030</Code>
+		<Message>Age of Spouse is required.</Message>
+	</Error>
+	<Error Key="SpouseAgeError">
+		<Code>EC031</Code>
+		<Message>Age of Spouse is Invalid.(Should be between 1-110)</Message>
+	</Error>
+	<Error Key="SpouseGender">
+		<Code>EC032</Code>
+		<Message>Gender of Spouse is required.</Message>
+	</Error>
+	<Error Key="SpouseGenderError">
+		<Code>EC033</Code>
+		<Message>Gender of Spouse is Invalid.(Should be M or F )</Message>
+	</Error>
+	<Error Key="SpouseGenderIssue">
+		<Code>EC034</Code>
+		<Message>Gender Of Spouse Is Invalid.Check with that of Employee</Message>
+	</Error>
+	<Error Key="SpouseIsMedicalPlanSelectedError">
+		<Code>EC035</Code>
+		<Message>IsMedicalPlanSelected for Spouse is Invalid.(should be 0 or 1)</Message>
+	</Error>
+	<Error Key="SpouseMedicalPlanError">
+		<Code>EC036</Code>
+		<Message>Medical Plan Not Applicable for Spouse since Employee Medical plan is not selected</Message>
+	</Error>
+	<Error Key="SpouseIsDentalPlanSelectedError">
+		<Code>EC037</Code>
+		<Message>IsDentalPlanSelected for Spouse is Invalid.(should be 0 or 1)</Message>
+	</Error>
+	<Error Key="SpouseDentalPlanError">
+		<Code>EC038</Code>
+		<Message>Dental Plan Not Applicable for Spouse since Employee Dental plan is not selected</Message>
+	</Error>
+	<Error Key="SpouseIsVisionPlanSelectedError">
+		<Code>EC039</Code>
+		<Message>IsVisionPlanSelected for Spouse is Invalid.(should be 0 or 1)</Message>
+	</Error>
+	<Error Key="SpouseVisionPlanError">
+		<Code>EC040</Code>
+		<Message>Vision Plan Not Applicable for Spouse since Employee Vision plan is not selected</Message>
+	</Error>
+	<Error Key="SpouseOrthoTreatmentError">
+		<Code>EC041</Code>
+		<Message>Ortho Treatment for Spouse is Invalid.(Should be 0 or 1)</Message>
+	</Error>
+	<Error Key="SpouseOrtho">
+		<Code>EC042</Code>
+		<Message>Othodontic for Spouse is invalid since the DentalPlanExist for Spouse is Either 0 or Invalid</Message>
+	</Error>
+	<Error Key="SpouseCorrectivelensesError">
+		<Code>EC043</Code>
+		<Message>Correctivelenses for Spouse is Invalid.(Should be 0 or 1)</Message>
+	</Error>
+	<Error Key="SpouseLenses">
+		<Code>EC044</Code>
+		<Message>CorrectiveLenses for Spouse is invalid since the VisionPlanExist for Spouse is Either 0 or Invalid</Message>
+	</Error>
+	<Error Key="SpouseMedUtil">
+		<Code>EC045</Code>
+		<Message>Medical Util for Spouse is Invalid.(Should be between 1-3)</Message>
+	</Error>
+	<Error Key="SpouseMedUtilInvalid">
+		<Code>EC046</Code>
+		<Message>Medical Utilities for Spouse is invalid since the MedicalPlanExist for Spouse is Either 0 or Invalid</Message>
+	</Error>
+	<Error Key="SpouseMedUtilError">
+		<Code>EC047</Code>
+		<Message>Medical Utilities for Spouse is invalid since the MedicalPlanExist for Spouse is 1(Should be between 1-3)</Message>
+	</Error>
+	<Error Key="SpousePrescDrugsInvalid">
+		<Code>EC048</Code>
+		<Message>Drug Utilities for Spouse is invalid since the MedicalPlanExist for Spouse is Either 0 or Invalid</Message>
+	</Error>
+	<Error Key="SpousePrescDrugsError">
+		<Code>EC049</Code>
+		<Message>Drug Utilities for Spouse is invalid since the MedicalPlanExist for Spouse is 1(Should be between 1-3)</Message>
+	</Error>
+	<Error Key="SpousePrescDrugs">
+		<Code>EC050</Code>
+		<Message>Prescription Drugs for Spouse is Invalid.(Should be between 1-3)</Message>
+	</Error>
+	<Error Key="NoOfChildren">
+		<Code>EC051</Code>
+		<Message>No Child Plan Selected.</Message>
+	</Error>
+	<Error Key="NumberofChildrenError">
+		<Code>EC052</Code>
+		<Message>Number of Children is Invalid.(Should be between 0-100)</Message>
+	</Error>
+	<Error Key="ChildIsMedicalPlanSelectedError">
+		<Code>EC053</Code>
+		<Message>IsMedicalPlanSelected for Child is Invalid.(Should be 0 or 1)</Message>
+	</Error>
+	<Error Key="ChildMedicalPlanError">
+		<Code>EC054</Code>
+		<Message>Medical Plan Not Applicable for Child since Employee Medical plan is not selected</Message>
+	</Error>
+	<Error Key="ChildIsDentalPlanSelectedError">
+		<Code>EC055</Code>
+		<Message>IsDentalPlanSelected for Child is Invalid.(Should be 0 or 1)</Message>
+	</Error>
+	<Error Key="ChildDentalPlanError">
+		<Code>EC056</Code>
+		<Message>Dental Plan Not Applicable for Child since Employee Dental plan is not selected</Message>
+	</Error>
+	<Error Key="ChildIsVisionPlanSelectedError">
+		<Code>EC057</Code>
+		<Message>IsVisionPlanSelected for Child is Invalid.(Should be 0 or 1)</Message>
+	</Error>
+	<Error Key="ChildVisionPlanError">
+		<Code>EC058</Code>
+		<Message>Vision Plan Not Applicable for Child since Employee Vision plan is not selected</Message>
+	</Error>
+	<Error Key="ChildOrtho">
+		<Code>EC059</Code>
+		<Message>Othodontic for Child is invalid since the DentalPlanExist for Child is Either 0 or Invalid</Message>
+	</Error>
+	<Error Key="ChildOrthoTreatment">
+		<Code>EC060</Code>
+		<Message>Ortho Treatment for Child is Invalid</Message>
+	</Error>
+	<Error Key="ChildOrthoTreatmentError">
+		<Code>EC061</Code>
+		<Message>Ortho Treatment for Child is Invalid.(Should be less than or equal to No Of Children)</Message>
+	</Error>
+	<Error Key="ChildCorrectivelensesError">
+		<Code>EC062</Code>
+		<Message>Correctivelenses for Child is Invalid.(Should be less than or equal to No Of Children)</Message>
+	</Error>
+	<Error Key="ChildLenses">
+		<Code>EC063</Code>
+		<Message>CorrectiveLenses for Child is invalid since the VisionPlanExist for Child is Either 0 or Invalid</Message>
+	</Error>
+	<Error Key="ChildCorrectivelenses">
+		<Code>EC064</Code>
+		<Message>CorrectiveLenses for Child is invalid.(Should be an Integer)</Message>
+	</Error>
+	<Error Key="ChildMedUtil">
+		<Code>EC065</Code>
+		<Message>Medical Util for Child is Invalid.(Should be between 1-3)</Message>
+	</Error>
+	<Error Key="ChildMedUtilInvalid">
+		<Code>EC066</Code>
+		<Message>Medical Utilities for Child is invalid since the MedicalPlanExist for Child is Either 0 or Invalid</Message>
+	</Error>
+	<Error Key="ChildMedUtilError">
+		<Code>EC067</Code>
+		<Message>Medical Utilities for Child is invalid since the MedicalPlanExist for Child is 1(Should be between 1-3)</Message>
+	</Error>
+	<Error Key="ChildPrescDrugsInvalid">
+		<Code>EC068</Code>
+		<Message>Drug Utilities for Child is invalid since the MedicalPlanExist for Child is Either 0 or Invalid</Message>
+	</Error>
+	<Error Key="ChildPrescDrugsError">
+		<Code>EC069</Code>
+		<Message>Drug Utilities for Child is invalid since the MedicalPlanExist for Child is 1(Should be between 1-3)</Message>
+	</Error>
+	<Error Key="ChildPrescDrugs">
+		<Code>EC070</Code>
+		<Message>Presciption Drugs for Child is Invalid.(Should be between 1-3)</Message>
+	</Error>
+	<Error Key="MedicalPlanId">
+		<Code>EC071</Code>
+		<Message>MedicalPlanExist For Employee Is Invalid since the MedicalPlan Id Empty or Invalid</Message>
+	</Error>
+	<Error Key="DentalPlanId">
+		<Code>EC072</Code>
+		<Message>DentalPlanExist For Employee Is Invalid since the DentalPlan Id Empty or Invalid</Message>
+	</Error> 
+	<Error Key="VisionPlanId">
+		<Code>EC073</Code>
+		<Message>VisionPlanExist For Employee Is Invalid since the VisionPlan Id Empty or Invalid</Message>
+	</Error>
+	<Error Key="PlanExists">
+		<Code>EC074</Code>
+		<Message>Either of the IsMedicalPlanExists/IsDentalPlanExists/IsVisionPlanExists Should be selected for Employee.</Message>
+	</Error>
+	<Error Key="PlanId">
+		<Code>EC075</Code>
+		<Message>Either of the Medical/Dental/Vision PlanId Should be selected.</Message>
+	</Error>
+</Errors>

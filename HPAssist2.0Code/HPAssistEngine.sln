@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPAssistEngine", "HPAssistEngine\HPAssistEngine.csproj", "{B91D23A5-6E03-47DD-A09D-74B93EC0B1E4}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ModelingProject1", "ModelingProject1\ModelingProject1.modelproj", "{2FC0DC71-70AC-4584-99A8-639F5E2538B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B91D23A5-6E03-47DD-A09D-74B93EC0B1E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B91D23A5-6E03-47DD-A09D-74B93EC0B1E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B91D23A5-6E03-47DD-A09D-74B93EC0B1E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B91D23A5-6E03-47DD-A09D-74B93EC0B1E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FC0DC71-70AC-4584-99A8-639F5E2538B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FC0DC71-70AC-4584-99A8-639F5E2538B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FC0DC71-70AC-4584-99A8-639F5E2538B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FC0DC71-70AC-4584-99A8-639F5E2538B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

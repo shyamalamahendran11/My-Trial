@@ -1,0 +1,8 @@
+﻿<CompareCostRequest>
+  <TransactionID>123</TransactionID>
+  <PlanIds>
+    <MedicalId>1</MedicalId>
+    <DentalId>1</DentalId>
+    <VisionId>4</VisionId>
+  </PlanIds>
+</CompareCostRequest>

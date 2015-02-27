@@ -1,0 +1,46 @@
+<CostEstimate>
+	<PlanIds>
+		<MedicalId>1</MedicalId>
+		<DentalId>1</DentalId>
+		<VisionId>4</VisionId>
+	</PlanIds>
+	<Zipcode>68521</Zipcode>
+	<DeductionBand></DeductionBand>
+	<SpouseSurcharge></SpouseSurcharge>
+	<WellnessPlan></WellnessPlan>
+	<TobaccoUse></TobaccoUse>
+	<Employee>
+		<EmpAge>28</EmpAge>
+		<EmpGender>M</EmpGender>
+		<EmpMedicalPlanExist>1</EmpMedicalPlanExist>
+		<EmpDentalPlanExist>1</EmpDentalPlanExist>
+		<EmpVisionPlanExist>1</EmpVisionPlanExist>
+		<EmpOrthoDontic>1</EmpOrthoDontic>
+		<EmpCorrectivelenses>0</EmpCorrectivelenses>
+		<EmpMedicalUtil>1</EmpMedicalUtil>
+		<EmpDrugsUtil>2</EmpDrugsUtil>
+		<HouseHoldIncome>28000</HouseHoldIncome>
+	</Employee>
+	<Spouse>
+		<SpouseAge>25</SpouseAge>
+		<SpouseGender>F</SpouseGender>
+		<SpouseMedicalPlanExist>1</SpouseMedicalPlanExist>
+		<SpouseDentalPlanExist>1</SpouseDentalPlanExist>
+		<SpouseVisionPlanExist>1</SpouseVisionPlanExist>
+		<SpouseOrthoDontic>1</SpouseOrthoDontic>
+		<SpouseCorrectivelenses>1</SpouseCorrectivelenses>
+		<SpouseMedicalUtil>2</SpouseMedicalUtil>
+		<SpouseDrugsUtil>3</SpouseDrugsUtil>
+	</Spouse>
+	<Children>
+		<NoOfChildren>3</NoOfChildren>
+		<ChildMedicalPlanExist>1</ChildMedicalPlanExist>
+		<ChildDentalPlanExist>1</ChildDentalPlanExist>
+		<ChildVisionPlanExist>1</ChildVisionPlanExist>
+		<ChildOrthoDontic>2</ChildOrthoDontic>
+		<ChildCorrectivelenses>0</ChildCorrectivelenses>
+		<ChildMedicalUtil>2</ChildMedicalUtil>
+		<ChildDrugsUtil>2</ChildDrugsUtil>
+	</Children>
+</CostEstimate>
+

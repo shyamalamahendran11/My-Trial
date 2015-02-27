@@ -1,0 +1,112 @@
+﻿@{
+    ViewBag.Title = "CompareCost";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header>
+</header>
+<div id="body">
+    <section class="featured">
+           <div class="content-wrapper">
+             <center><img src="../../Content/themes/base/images/FireShot%20copy.png" /></center>
+              <hgroup class="title">
+                <center><h1>WELCOME TO HEALTH PLAN ASSIST!</h1></center>
+            </hgroup>
+            <hr style="border-top-color: #fff;margin-left: auto;margin-right: auto;width: 60%"/>
+            <center><h3><font color='white'>As you tell us about yourself, we’ll help you plan for your next year of<br />
+            medical expenses and answer common questions along the way.</font></h3></center>
+        </div>
+    </section>
+
+    <section class="content-wrapper main-content clear-fix">
+    <h3>We suggest the following steps:</h3>
+        <ol class="round">
+        @using (Html.BeginForm("MultipleCommand", "Home", FormMethod.Post, new { enctype = "multipart/form-data", id = "fooForm" }))
+        {
+            <li class="one">
+                <h5>Quote Result</h5>
+                <span style="font-family:Myriad Pro; color:#6f6f6f; font-size:0.93em">Out-Of-Pocket Expenses and Payroll Quote Result</span> 
+                <br />
+                <br />
+                <hr />
+                 <span style="font-family:Myriad Pro; color:#6f6f6f; font-size:1.93em">Cost Estimate</span>
+                <hr />
+                <table style="width:406px">
+                <tr>
+                <td><span style="text-align:left;font-size:0.93em">
+                <b>Let's see how your employer's medical plan offerings compare to the silver plan available on your state's insurance Exchange.</b></span></td>
+                </tr>
+                </table>
+                <table style="height:65px;width:380px;margin-left:535px;margin-top:-60px">
+                   <tr style="border:10px solid #D3DFE4">
+                        <td style="float:left;margin-top:10px;margin-left:5px">Dental / Vision Costs</td>
+                            <td style="float:right">
+                                <input id="one" type="button" value="Hide" style="background-color:#DEE5EA;height:30px;width:80px;border:none;float:left;color:white"  runat="server" onclick="HideDentalVision()"/>
+                                <input id="two" type="button" value="Show" style="background-color:#F65D4A;height:30px;width:80px;border:none;float:right;color:white" runat="server" onclick="ShowDentalVision()"/>
+                            </td>
+                    </tr>
+                </table>
+                <br />
+                  <table>
+                    <tr>
+                       <td style="width:385px;padding-left:5px;background-color:#F65D4A;border-right:15px solid white"><font style='color:white'><b>Breakdown of Costs</b></font></td>
+                       <td style="width:340px;padding-left:12px;background-color:#F65D4A"><font style='color:white'><b>Estimated Amounts</b></font></td>
+                    </tr>
+                  </table>
+
+                <div runat="server" id="medicalDiv" style="display:block">
+                  @Html.Raw(@TempData["DentalOnly"])
+                </div>
+
+                <div runat="server" id="OOPDiv" style="display:none">
+                  @Html.Raw(@TempData["oopResult"]) 
+                </div>
+                <br />
+                 <div runat="server" id="msgdiv">
+                 @Html.Raw(@TempData["msgResult"])
+                 @Html.Raw(@TempData["ccmsgResult"])
+                 </div>
+               </li>
+            
+            <li class="two">
+                <h5>Upload Input Data</h5>
+                <span style="font-family:Myriad Pro; color:#6f6f6f; font-size:0.93em">Please upload Compare Cost Input data file in XML format.</span> 
+                <br />
+                 <table>
+                    <tr>    
+                        <td>
+                             <input type="file" runat="server"  id="fileInputDataCC" name="fileInputDataCC" />
+                             <button type="submit" id="btnUpload" name="command" value="CompareCost" style="width:300px; height:30px; background-color:#F65D4A; color:#FFFFFF;border:none">CALCULATE MY COVERAGE USE</button>
+                               @*<button type="submit" id="btnUpload" name="command" value="CompareCost" style="width:300px; height:30px; background-color:#F65D4A; color:#FFFFFF;border:none" onclick="return foo();">CALCULATE MY COVREAGE USE</button>*@
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                         <input type="hidden" id="txtOOPResult" name="txtOOPResult" runat="server" value="@TempData["oopResult"]" />
+                         <input type="hidden" id="txtMedicalOnlyResult" name="txtMedicalOnlyResult" runat="server" value="@TempData["DentalOnly"]" />
+
+                         <div runat="server" id="CompareCostDiv"  style="background-color:#EDEFF2;border-radius:8px; border-color:none;width:550px;color:black">
+                             @Html.Raw(@TempData["CCValidateError"])
+                         </div>
+                        </td>
+                    </tr>
+                </table>
+            </li>
+        }
+        </ol>
+    </section>
+    <script type="text/javascript">
+        function HideDentalVision() {
+            document.getElementById("one").style.backgroundColor = "#DEE5EA";
+            document.getElementById("two").style.backgroundColor = "#F65D4A";
+            document.getElementById("medicalDiv").style.display = "block";
+            document.getElementById("OOPDiv").style.display = "none";
+        }
+        function ShowDentalVision() {
+            document.getElementById("one").style.backgroundColor = "#F65D4A";
+            document.getElementById("two").style.backgroundColor = "#DEE5EA";
+            document.getElementById("OOPDiv").style.display = "block";
+            document.getElementById("medicalDiv").style.display = "none";
+        }
+    </script>
+</div>

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="CostEstimate">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PlanIds">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="MedicalId"  minOccurs ="0">
+								<xs:simpleType>
+									<xs:union memberTypes="xs:integer EmptyStrings"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="DentalId"  minOccurs ="0">
+								<xs:simpleType>
+									<xs:union memberTypes="xs:integer EmptyStrings"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="VisionId"  minOccurs ="0">
+								<xs:simpleType>
+									<xs:union memberTypes="xs:integer EmptyStrings"/>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Zipcode" minOccurs="1" maxOccurs="1">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:pattern value="[0-9]{5}"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="DeductionBand" minOccurs="0" >
+					<xs:simpleType>
+						<xs:union memberTypes="xs:string EmptyStrings"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="SpouseSurcharge"  minOccurs="0" >
+					<xs:simpleType>
+						<xs:union memberTypes="Options EmptyStrings"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="WellnessPlan" minOccurs="0">
+					<xs:simpleType>
+						<xs:union memberTypes="Options EmptyStrings"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="TobaccoUse" minOccurs="0">
+					<xs:simpleType>
+						<xs:union memberTypes="Options EmptyStrings"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Employee">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="EmpAge" type="AgeLimit" minOccurs="1" />
+							<xs:element name="EmpGender" type="GenderPattern" minOccurs="1" />
+							<xs:element name="EmpMedicalPlanExist" nillable="true" minOccurs ="0">
+								<xs:simpleType>
+									<xs:union memberTypes="int-or-empty"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="EmpDentalPlanExist"  nillable="true" minOccurs="0">
+								<xs:simpleType>
+									<xs:union memberTypes="int-or-empty"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="EmpVisionPlanExist"  nillable="true" minOccurs ="0">
+								<xs:simpleType>
+									<xs:union memberTypes="int-or-empty"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="EmpOrthoDontic" minOccurs="0">
+								<xs:simpleType>
+									<xs:union memberTypes="EmptyStrings Int"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="EmpCorrectivelenses" minOccurs="0">
+								<xs:simpleType>
+									<xs:union memberTypes="EmptyStrings Int"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="EmpMedicalUtil" minOccurs ="0">
+								<xs:simpleType>
+									<xs:union memberTypes="EmptyStrings Util"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="EmpDrugsUtil" minOccurs="0">
+								<xs:simpleType>
+									<xs:union memberTypes="EmptyStrings Util"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="HouseHoldIncome">
+								<xs:simpleType>
+									<xs:union memberTypes="EmptyStrings SalaryPattern"/>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Spouse">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="SpouseAge">
+								<xs:simpleType>
+									<xs:union memberTypes="EmptyStrings AgeLimit"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="SpouseGender">
+								<xs:simpleType>
+									<xs:union memberTypes="EmptyStrings GenderPattern"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="SpouseMedicalPlanExist" minOccurs="0">
+								<xs:simpleType>
+									<xs:union memberTypes="int-or-empty"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="SpouseDentalPlanExist" minOccurs ="0">
+								<xs:simpleType>
+									<xs:union memberTypes="int-or-empty"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="SpouseVisionPlanExist" minOccurs="0">
+								<xs:simpleType>
+									<xs:union memberTypes="int-or-empty"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="SpouseOrthoDontic" minOccurs ="0">
+								<xs:simpleType>
+									<xs:union memberTypes="EmptyStrings Int"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="SpouseCorrectivelenses" minOccurs="0">
+								<xs:simpleType>
+									<xs:union memberTypes="EmptyStrings Int"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="SpouseMedicalUtil" minOccurs="0" >
+								<xs:simpleType>
+									<xs:union memberTypes="EmptyStrings Util"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="SpouseDrugsUtil" minOccurs="0" >
+								<xs:simpleType>
+									<xs:union memberTypes="EmptyStrings Util"/>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Children">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="NoOfChildren"  >
+								<xs:simpleType>
+									<xs:union memberTypes="EmptyStrings NoOfChildren"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="ChildMedicalPlanExist" minOccurs="0">
+								<xs:simpleType>
+									<xs:union memberTypes="int-or-empty"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="ChildDentalPlanExist" minOccurs="0" >
+								<xs:simpleType>
+									<xs:union memberTypes="int-or-empty"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="ChildVisionPlanExist" minOccurs="0">
+								<xs:simpleType>
+									<xs:union memberTypes="int-or-empty"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="ChildOrthoDontic"  nillable="true"  minOccurs="0">
+								<xs:simpleType>
+									<xs:union memberTypes="EmptyStrings NoOfChildren"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="ChildCorrectivelenses" nillable="true"  minOccurs="0">
+								<xs:simpleType>
+									<xs:union memberTypes="EmptyStrings NoOfChildren"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="ChildMedicalUtil"  nillable="true"  minOccurs="0">
+								<xs:simpleType>
+									<xs:union memberTypes="EmptyStrings Util"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="ChildDrugsUtil"  nillable="true"  minOccurs="0">
+								<xs:simpleType>
+									<xs:union memberTypes="EmptyStrings Util"/>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="AgeLimit" >
+		<xs:restriction base="xs:integer" >
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="110"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="GenderPattern">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[MFmf]"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Int">
+		<xs:restriction base="xs:integer">
+			<xs:pattern value="[01]"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Util">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SalaryPattern">
+		<xs:restriction base="xs:decimal">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="9999999"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="NonEmptyStrings">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EmptyStrings">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value=""/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="NoOfChildren" >
+		<xs:restriction base="xs:integer" >
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="int-or-empty">
+		<xs:union memberTypes="Int EmptyStrings" />
+	</xs:simpleType>
+	<xs:simpleType name="Options">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="Yes|No|yes|no|YES|NO"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
